@@ -1,5 +1,7 @@
+import Navbar from "@/components/module/Navbar";
 import { useGetAllBooksQuery } from "@/redux/features/books/booksApi";
 import { useEffect } from "react";
+import { Outlet } from "react-router";
 
 export default function Home() {
 
@@ -22,7 +24,8 @@ export default function Home() {
 
   return (
     <div>
-      <h3>This is Home component</h3>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
     </div>
   );
 }
